@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>choose Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url(781992_black-wallpapers-anime-wallpapers-zone_1920x1080_h.png);
+      backdrop-filter: blur(5px);
+    }
+
+    #main {
+      margin-top: 50px;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .media-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .media-box {
+      width: 250px;
+      height: 260px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-top: 30px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .media-box:hover {
+      transform: scale(1.1);
+      border: 20px solid red;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    #ques {
+      margin-bottom: 50px;  
+    }
+    #ques p {
+      color: #f58181; 
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+    <div id="ques">
+        <p id="main">Choose any one box</p>
+    </div>
+    <div class="media-container" >
+        <div class="media-box">
+            <img src="sound.png" alt="Audio Icon" onclick="audioWeb()">
+            <p>Audio</p>
+        </div>
+  
+        <div class="media-box" >
+            <img src="image.png" alt="Image Icon"onclick="imageWeb()">
+            <p>Image</p>
+        </div>
+  
+        <div class="media-box" >
+            <img src="text.png" alt="Text Icon"onclick="textWeb()">
+            <p>Text</p>
+        </div>
+    </div>
+    <script>
+        function audioWeb(){
+            window.location.href="audio server1.html"
+        }
+        function imageWeb(){
+            window.location.href="imgserver1.html"
+        }
+        function textWeb(){
+            window.location.href="textserver1.html"
+        }
+    </script>
+</body>
+</html>

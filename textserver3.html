@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TS3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(ok.jpg);  
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #quiz-container {
+      background-color: #fdecdd62;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      max-width: 600px;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 3);
+      opacity: 85%;
+    }
+
+    
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    #ques{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body onload="blur()" class="body"style="background-color: lightblue;">
+  <script src="scipt.js"></script>
+<div id="quiz-container">
+   <p id="ques">3."Swagat nahi karoge aap hamara" Which movie dailouge is this ?</p> 
+
+  <form action="">
+    <input type="radio" name="actor" value="Dabangg 2">Dabangg 2 <br><br>
+    <input type="radio" name="actor" value="Kick">Kick <br><br>
+    <input type="radio" name="actor" value="Wantedr">Wanted <br><br>
+    <input type="radio" name="actor" value="Veer">Veer
+  </form><br>
+
+  <button onclick="checkAnswer()" style="width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #4caf4fe1;
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+  box-shadow: 0 0 10px rgba( 0, 0, 0.3);">Submit Answer</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+    function checkAnswer(){
+        var radios = document.getElementsByName('actor');
+            var selectedValue = null;
+      
+            for (var i = 0; i < radios.length; i++) {
+              if (radios[i].checked) {
+                selectedValue = radios[i].value;
+                break;
+              }
+            }
+      
+            if (selectedValue === "Dabangg 2") {
+              document.getElementById('result').innerHTML = " This is the correct answer";
+              document.getElementById('result').style.color = "green";
+              window.location.href="thanks.html"
+            } else {
+              document.getElementById('result').innerHTML = "Oops! Try again";
+              document.getElementById('result').style.color = "red";
+            }
+    }
+    
+</script>
+</body>
+</html>

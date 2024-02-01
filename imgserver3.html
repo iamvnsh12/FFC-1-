@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IS3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(wildlife-landscape-illustration-wallpaper-preview.jpg);  
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      /* backdrop-filter: blur(0PX); */
+    
+    }
+
+    #quiz-container {
+      background-color: #82acdb65;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      max-width: 600px;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+     
+    }
+
+    img {
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .option {
+      margin-bottom: 10px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body onload="blur()" class="body">
+  <script src="scipt.js"></script>
+<div id="quiz-container">
+   <p>3. What is the name of this actor ?</p> 
+  <img src="akhil.jpg" alt="Quiz Image" height="219px " width="189px">
+
+  <form action="">
+    <input type="radio" name="actor" value="Dhanush">Dhanush <br><br>
+    <input type="radio" name="actor" value="Mahesh Babu">Mahesh Babu <br><br>
+    <input type="radio" name="actor" value="Akhil Akkineni">Akhil Akkineni <br><br>
+    <input type="radio" name="actor" value="Ram Charan">Ram Charan
+  </form><br>
+
+  <button onclick="checkAnswer()" style="width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #4caf4f8e;
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+  box-shadow: 0 0 10px rgba( 0, 0, 0.3);">Submit Answer</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+    function checkAnswer(){
+        var radios = document.getElementsByName('actor');
+            var selectedValue = null;
+      
+            for (var i = 0; i < radios.length; i++) {
+              if (radios[i].checked) {
+                selectedValue = radios[i].value;
+                break;
+              }
+            }
+      
+            if (selectedValue === "Akhil Akkineni") {
+              document.getElementById('result').innerHTML = " This is the correct answer";
+              document.getElementById('result').style.color = "green";
+              window.location.href="thanks.html"
+            } else {
+              document.getElementById('result').innerHTML = "Oops! Try again";
+              document.getElementById('result').style.color = "red";
+            }
+    }
+    
+</script>
+
+</body>
+</html>

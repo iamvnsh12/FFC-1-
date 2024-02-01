@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #a6ecdb;
+      background-image: url(free-fun-100-question-quiz-3.png);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #quiz-container {
+      background-color: #99b8e0ef;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    #start-btn {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #start-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div id="quiz-container">
+  <h1>Welcome to the FFC </h1>
+  <p>Test your knowledge with our quiz. Click the button below to start!</p>
+  <button id="start-btn" onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<script>
+  function startQuiz() {
+    // You can implement logic to navigate to the quiz page or load the quiz questions here
+    // For simplicity, let's just alert that the quiz has started
+    window.location.href="quiz2.html"
+      }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .thank-you {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            background-color: #7ae1ee54; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .bottom-right {
+            position: fixed;
+              : 10px;
+            right: 10px;
+            font-size: 30px;
+            color: #555;
+        }
+        #btn{
+        background-color: cadetblue;
+        margin-top: 47px;
+        border-radius: 2px;
+        }
+        #btn:hover{
+       border: 5px solid red;
+       border-radius: 5px;
+        }
+    </style>
+    <title>Quiz Thank You</title>
+</head>
+<body style="background-color: lightblue;">
+
+<div class="container">
+    <div class="thank-you">
+        Thank you for playing the quiz!
+    </div>
+    <button id="btn" onclick="page2()">RESTART</button>
+</div>
+
+<div class="bottom-right">
+    Vansh Singh and Yash Mogha 
+</div>
+<script>
+    function page2(){
+        window.location.href="quiz2.html"
+    }
+</script>
+</body>
+</html>

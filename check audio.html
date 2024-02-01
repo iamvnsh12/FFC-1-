@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Display Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-image: url("bac3.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #quiz-container {
+      background-color: #ffdd95;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      max-width: 600px;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #main {
+      color: #f58181;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    #question {
+      color: rgb(0, 0, 0);
+      font-size: 24px;
+    }
+
+    #formEle {
+      color: coral;
+      font-size: 18px;
+    }
+
+    .btn {
+      width: 100px;
+      height: 40px;
+      border-radius: 15px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      border: none;
+      margin-top: 15px;
+      box-shadow: 0 0 10px rgba( 0, 0, 0.3);
+    }
+
+    #result {
+      color: white;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body style="background-color: lightblue;">
+  <div id="quiz-container">
+    <p id="main">Enjoy your quiz</p>
+    
+    <p id="question">1. Identify which actor's dialogue is this?</p>
+    <audio controls>
+      <source src="vijya.mp3" type="audio/mp3">
+    </audio>
+
+    <form id="formEle">
+      <br>
+      <input type="radio" name="actor" value="Vijay Antony"> Vijay Antony  <br><br>
+      <input type="radio" name="actor" value="Vijay Kumar"> Vijay Kumar  <br><br>
+      <input type="radio" name="actor" value="Vijay Sethupathi"> Vijay Sethupathi  <br><br>
+      <input type="radio" name="actor" value="Vijay Thalapathy"> Vijay Thalapathy
+    </form><br>
+
+    <button class="btn" onclick="select()">Submit</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function select() {
+      var radios = document.getElementsByName('actor');
+      var selectedValue = null;
+
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          selectedValue = radios[i].value;
+          break;
+        }
+      }
+
+      if (selectedValue === "Vijay Thalapathy") {
+        document.getElementById('result').innerHTML = "Wow! This is the correct answer";
+        document.getElementById('result').style.color = "green";
+      } else {
+        document.getElementById('result').innerHTML = "Oops! Try again";
+        document.getElementById('result').style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
